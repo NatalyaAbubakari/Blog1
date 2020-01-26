@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  devise_for :users
+  
+  root "home#index"
 
   resource :contacts, only: [:new, :create], path_names: { :new => '' }
 
