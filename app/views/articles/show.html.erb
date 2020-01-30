@@ -1,6 +1,8 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.text %></p>
 
+<p>Author: <%= current_user.username %></p>
+
 <h2>Comments</h2>
 
 <% @article.comments.each do |comment| %>
